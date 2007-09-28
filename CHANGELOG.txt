@@ -5,6 +5,11 @@ Admin Menu x.x-x.x, xxxx-xx-xx
 
 
 
+Admin Menu 4.7-1.x, xxxx-xx-xx
+------------------------------
+Fixed path_to_theme() call breaking blocks page.
+
+
 Admin Menu 4.7-1.4, 2007-09-06
 ------------------------------
 #156952 by sun: Fixed admin menu inaccessible due to margins.
