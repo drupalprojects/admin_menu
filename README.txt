@@ -1,9 +1,22 @@
 /* $Id$ */
 
+-- SUMMARY --
+
 Drupal Administration Menu is re-building and automagically slicing the whole
 menu tree below /admin including all invisible local tasks into the Drupal
 Administration Menu. So administrators need less time to access pages which
 are only visible after one or two clicks normally.
+
+For a full description visit the project page:
+  http://drupal.org/project/admin_menu
+Bug reports, feature suggestions and latest developments:
+  http://drupal.org/project/admin_menu/issues
+
+
+-- REQUIREMENTS --
+
+None.
+
 
 -- INSTALLATION --
 
@@ -60,8 +73,15 @@ are only visible after one or two clicks normally.
   Fix: Ensure that Admin Menu block is assigned to the header region.
 
 
--- AUTHORS --
+-- CONTACT --
 
-Daniel F. Kudwien, dev@unleashedmind.com
-Stefan M. Kudwien, dev@unleashedmind.com
+Current maintainers:
+* Daniel F. Kudwien (sun) - dev@unleashedmind.com
+* Stefan M. Kudwien (smk-ka) - dev@unleashedmind.com
+
+This project has been sponsored by:
+* UNLEASHED MIND
+  Specialized in consulting and planning of Drupal powered sites, UNLEASHED
+  MIND offers installation, development, theming, customization, and hosting
+  to get you started. Visit http://www.unleashedmind.com for more information.
 
