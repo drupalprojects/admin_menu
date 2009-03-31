@@ -472,7 +472,16 @@ if (module_exists('devel') && !function_exists('devel_admin_menu')) {
       if ($access_switch && $devel_user_links = module_invoke('devel', 'switch_user_list')) {
         $mid_logout = $admin_menu['index']['logout'];
         foreach ($devel_user_links as $link) {
-          if (preg_match('!href="'. base_path() .'([^\?]+)\?([^"]+)" title="([^"]+)">((<em>)?[^<]+(</em>)?)!', $link, $match)) {
+          if (is_array($link)) {
+            admin_menu_add_item($admin_menu, $mid_logout, array(
+              'title' => $link['title'],
+              'description' => $link['attributes']['title'],
+              'path' => $link['href'],
+              'query' => $link['query'],
+            ));
+          }
+          // @todo Remove when Devel 5.x-1.1 has been released.
+          elseif (preg_match('!href="' . base_path() . '([^\?]+)\?([^"]+)" title="([^"]+)">((<em>)?[^<]+(</em>)?)!', $link, $match)) {
             admin_menu_add_item($admin_menu, $mid_logout, array('title' => $match[4], 'description' => $match[3], 'path' => urldecode($match[1]), 'query' => $match[2]));
           }
         }
