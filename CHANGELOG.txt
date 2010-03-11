@@ -6,6 +6,7 @@ Admin Menu x.x-x.x, xxxx-xx-xx
 
 Admin Menu 6.x-3.x, xxxx-xx-xx
 ------------------------------
+by sun: Added cvs_deploy support.
 
 
 Admin Menu 6.x-3.0-ALPHA4, 2010-03-11
