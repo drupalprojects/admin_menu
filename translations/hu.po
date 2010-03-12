@@ -1,565 +1,283 @@
-# Hungarian translation of admin_menu (all releases)
+# Hungarian translation of admin_menu (6.x-3.0-alpha4)
 # Copyright (c) 2010 by the Hungarian translation team
-# Generated from files:
-#  admin_menu.module,v 1.43.2.16 2008/12/28 15:23:07 sun
-#  admin_menu.inc,v 1.1.4.18 2008/12/17 09:10:24 sun
-#  admin_menu.module,v 1.43.2.17 2009/01/31 08:29:25 sun
-#  admin_menu.inc,v 1.11.2.20.2.11 2009/06/09 18:21:22 sun
-#  admin_menu.inc,v 1.1.4.18.2.10 2009/06/05 20:53:24 sun
-#  admin_menu.module,v 1.43.2.18 2009/06/21 18:58:04 sun
-#  admin_menu.inc,v 1.11.2.20.2.23 2009/08/14 12:19:10 sun
-#  admin_menu.inc,v 1.11.2.20.2.21 2009/07/29 15:50:50 sun
-#  admin_menu.inc,v 1.11.2.20.2.29 2010/03/06 01:19:53 sun
-#  admin_menu.inc,v 1.1.4.18.2.14 2009/07/18 22:28:17 sun
-#  admin_menu.inc,v 1.1.4.10 2008/02/24 03:56:22 sun
-#  admin_menu.inc,v 1.1.4.14 2008/06/08 14:04:53 sun
-#  admin_menu.inc,v 1.1.4.4 2007/12/02 09:54:28 sun
-#  admin_menu.inc,v 1.1.4.3 2007/12/02 06:25:51 sun
-#  admin_menu.inc,v 1.1.4.6 2007/12/09 01:02:40 sun
-#  admin_menu.inc,v 1.1.4.15 2008/07/14 22:27:47 sun
-#  admin_menu.inc,v 1.11.2.20 2008/12/28 15:23:07 sun
-#  admin_menu.module,v 1.26.2.16 2008/02/24 03:56:22 sun
-#  admin_menu.inc,v 1.11.2.6 2008/06/26 20:08:37 pwolanin
-#  admin_menu.module,v 1.26.2.33 2008/11/02 21:36:36 sun
-#  admin_menu.inc,v 1.11.2.10 2008/09/12 16:21:22 pwolanin
-#  admin_menu.module,v 1.26.2.23 2008/06/08 14:16:14 sun
-#  admin_menu.module,v 1.26.2.5 2007/12/02 11:40:50 sun
-#  admin_menu.module,v 1.43.2.2 2008/06/08 02:40:32 sun
-#  admin_menu.module,v 1.26.2.3 2007/12/02 06:25:51 sun
-#  admin_menu.module,v 1.26.2.11 2008/01/06 14:52:05 sun
-#  admin_menu.inc,v 1.11.2.24 2009/04/18 03:24:00 sun
-#  admin_menu.module,v 1.26.2.26 2008/07/14 12:38:04 sun
-#  admin_menu.inc,v 1.11.2.25 2009/06/09 18:21:29 sun
-#  views_plugin_display_system.inc,v 1.1.2.1 2010/03/11 01:10:55 sun
-#  admin_menu.info,v 1.5.2.1 2008/11/30 12:50:36 sun
-#  admin_menu.info,v 1.3.6.1 2007/12/02 06:25:51 sun
-#  admin_menu.info,v 1.5 2008/04/26 16:10:09 sun
-#  admin_menu.info,v 1.3 2007/02/10 18:18:34 sun
-#  admin_menu.info,v 1.3.6.1.2.1 2009/03/08 02:02:05 sun
-#  admin_menu.info,v 1.5.2.1.2.2 2009/07/29 15:50:51 sun
-#  admin_menu_toolbar.info,v 1.1.2.2 2009/08/16 20:55:33 sun
-#  admin_views.info,v 1.1.2.1 2009/08/15 18:59:25 sun
-#  admin_views.views.inc,v 1.1.2.1 2010/03/11 01:10:55 sun
-#  admin_menu.api.php,v 1.1.2.3 2009/07/22 20:33:17 sun
-#  admin_menu.module,v 1.43.2.7 2008/09/09 14:39:01 sun
-#  admin_menu.module,v 1.10.4.15 2007/11/18 16:17:33 sun
-#  admin_menu.module,v 1.10.4.8 2007/10/10 10:00:27 sun
-#  admin_menu.module,v 1.10.4.5 2007/09/06 11:40:47 sun
-#  admin_menu.module,v 1.43.2.17.2.9 2009/06/05 20:51:38 sun
-#  admin_menu.module,v 1.26.2.33.2.18 2009/06/05 20:53:24 sun
-#  admin_menu.module,v 1.43.2.17.2.26 2009/08/16 21:51:12 sun
-#  admin_menu.module,v 1.43.2.17.2.24 2009/07/29 15:50:51 sun
-#  admin_menu.module,v 1.43.2.17.2.30 2010/02/20 01:02:58 sun
-#  admin_menu.module,v 1.26.2.33.2.24 2009/07/23 10:49:32 sun
-#  admin_menu.module,v 1.43.2.4 2008/06/26 20:08:37 pwolanin
-#  admin_menu.install,v 1.4.2.4 2008/09/12 16:21:22 pwolanin
-#  admin_menu_toolbar.module,v 1.3.2.2 2009/08/16 20:55:33 sun
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: admin_menu (all releases)\n"
-"POT-Creation-Date: 2010-03-11 23:08-0800\n"
-"PO-Revision-Date: 2010-03-12 08:15+0100\n"
+"Project-Id-Version: admin_menu (6.x-3.0-alpha4)\n"
+"POT-Creation-Date: 2010-03-11 23:21-0800\n"
+"PO-Revision-Date: 2010-03-11 23:15-0800\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"Last-Translator: Balogh Zoltán <poedit@baloghzoltan.hu>\n"
 
-#: admin_menu.module:321,321,318,318;
-#: admin_menu.inc:391,391,561,571,436,433,451,634
 msgid "Home"
 msgstr "Címlap"
-
-#: admin_menu.inc:133,133,133,133,133,126,126,130,133,166,166
-msgid "Administer"
-msgstr "Adminisztráció"
-
-#: admin_menu.inc:415,417,395,415,430,444,518,430,286,284,300,540;
-#: admin_menu.module:348,427,384,348,427,321,205,327,312,385;
-#: admin_views/plugins/views_plugin_display_system.inc:143
 msgid "None"
 msgstr "Nincs"
-
-#: admin_menu.inc:358,358,373,393,446,373,227,225,235,446
 msgid "Advanced settings"
 msgstr "Haladó beállítások"
-
-#: admin_menu.inc:415,417,395,415,430,444,518,430,286,284,300,540;
-#: admin_menu.module:348,427,384,348,427,321,205,327,312,385
 msgid "Weight"
 msgstr "Súly"
-
-#: admin_menu.info:0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
-#: admin_menu_toolbar/admin_menu_toolbar.info:0,0;
-#: admin_views/admin_views.info:0,0
 msgid "Administration"
 msgstr "Adminisztráció"
-
-#: admin_views/plugins/views_plugin_display_system.inc:151
 msgid "Path"
 msgstr "Útvonal"
-
-#: admin_menu.inc:120,118,128
 msgid "Menu"
 msgstr "Menü"
-
-#: admin_views/admin_views.views.inc:19,28
 msgid "System"
 msgstr "Rendszer"
-
-#: admin_menu.inc:150,150,150,150,150,143,143,147,150,184,69,67,77,184;
-#: admin_menu.api.php:46,46
 msgid "Run cron"
 msgstr "Időzített feladatok futtatása"
-
-#: admin_menu.module:34
-msgid "User management"
-msgstr "Felhasználókezelés"
-
-#: admin_menu.inc:192
 msgid "Log out"
 msgstr "Kilépés"
-
-#: admin_menu.inc:261,160,160,160,261,276,160,285,314,276,136,134,144,314
 msgid "Enable developer modules"
 msgstr "Fejlesztő modulok engedélyezése"
-
-#: admin_menu.inc:261,247,160,252,160,160,261,276,160,285,314,276,136,134,144,314
 msgid "Disable developer modules"
 msgstr "Fejlesztő modulok tiltása"
-
-#: admin_menu.inc:346,346,361,381,434,361,215,213,223,434
 msgid "Adjust top margin"
 msgstr "Felső margó beállítása"
-
-#: admin_menu.inc:348,348,363,383,436,363,217,215,225,436
-msgid "If enabled, the site output is shifted down approximately 20 pixels from the top of the viewport to display the administration menu. If disabled, some absolute- or fixed-positioned page elements may be covered by the administration menu."
-msgstr "Ha engedélyezett, akkor a webhely kimenete kb. 20 képponttal el lesz tolva a böngésző ablak tetejétől, hogy helyet biztosítson az adminisztrációs menünek. Ha ez a beállítás tiltott, akkor némely abszolút, vagy fix helyre pozícionált elemet eltakarhat az adminisztrációs menü."
-
-#: admin_menu.inc:352,352,367,387,440,367,221,219,229,440
+msgid ""
+"If enabled, the site output is shifted down approximately 20 pixels "
+"from the top of the viewport to display the administration menu. If "
+"disabled, some absolute- or fixed-positioned page elements may be "
+"covered by the administration menu."
+msgstr ""
+"Ha engedélyezett, akkor a webhely kimenete kb. 20 képponttal el lesz "
+"tolva a böngésző ablak tetejétől, hogy helyet biztosítson az "
+"adminisztrációs menünek. Ha ez a beállítás tiltott, akkor "
+"némely abszolút, vagy fix helyre pozícionált elemet eltakarhat az "
+"adminisztrációs menü."
 msgid "Keep menu at top of page"
 msgstr "Tartsa a menüt a lap tetején"
-
-#: admin_menu.inc:354,354,369,389,442,369,223,221,231,442
-msgid "If enabled, the administration menu is always displayed at the top of the browser viewport (even after the page is scrolled). <strong>Note: In some browsers, this setting results in a malformed page, an invisible cursor, non-selectable elements in forms, or other issues. Disable this option if these issues occur.</strong>"
-msgstr "Ha engedélyezett, akkor az adminisztrációs menü mindig a böngésző ablak tetején marad (akkor is, ha lejjebb gördül az oldal). <strong>Megjegyzés: Néhány böngészőben ez a beállítás rosszul megformázott oldalt, láthatatlan kurzort, nem kiválasztható űrlap elemeket, vagy egyéb problémákat okozhat. Ha ezek előfordulnak, akkor ezt a lehetőséget ki kell kapcsolni.</strong>"
-
-#: admin_menu.inc:362,343,348,362,377,397,456,377,231,229,239,456;
-#: admin_menu.module:132,115,132,116
+msgid ""
+"If enabled, the administration menu is always displayed at the top of "
+"the browser viewport (even after the page is scrolled). <strong>Note: "
+"In some browsers, this setting results in a malformed page, an "
+"invisible cursor, non-selectable elements in forms, or other issues. "
+"Disable this option if these issues occur.</strong>"
+msgstr ""
+"Ha engedélyezett, akkor az adminisztrációs menü mindig a "
+"böngésző ablak tetején marad (akkor is, ha lejjebb gördül az "
+"oldal). <strong>Megjegyzés: Néhány böngészőben ez a beállítás "
+"rosszul megformázott oldalt, láthatatlan kurzort, nem "
+"kiválasztható űrlap elemeket, vagy egyéb problémákat okozhat. Ha "
+"ezek előfordulnak, akkor ezt a lehetőséget ki kell "
+"kapcsolni.</strong>"
 msgid "Collapse fieldsets on modules page"
 msgstr "Mezőcsoportok összezárása a modulok oldalon"
-
-#: admin_menu.inc:364,364,379,399,458,379,233,231,241,458
-msgid "If enabled, fieldsets on the <a href=\"!modules-url\">modules</a> page are automatically collapsed when loading the page."
-msgstr "Ha engedélyezett, akkor a mezőcsoportok a <a href=\"!modules-url\">modulok</a> oldalon automatikusan összecsukódnak, amikor a lap betöltődik."
-
-#: admin_menu.inc:367,367,382,402,461,382,236,234,244,461
-msgid "If the Utility module was installed for this purpose, it can be safely disabled and uninstalled."
-msgstr "Ha a <em>Utility</em> modul evvel a szándékkal van telepítve, akkor biztonságosan letiltható és eltávolítható."
-
-#: admin_menu.inc:371,371,386,406,465,386,240,238,254,465
+msgid ""
+"If enabled, fieldsets on the <a href=\"!modules-url\">modules</a> page "
+"are automatically collapsed when loading the page."
+msgstr ""
+"Ha engedélyezett, akkor a mezőcsoportok a <a "
+"href=\"!modules-url\">modulok</a> oldalon automatikusan "
+"összecsukódnak, amikor a lap betöltődik."
+msgid ""
+"If the Utility module was installed for this purpose, it can be safely "
+"disabled and uninstalled."
+msgstr ""
+"Ha a <em>Utility</em> modul evvel a szándékkal van telepítve, akkor "
+"biztonságosan letiltható és eltávolítható."
 msgid "Move local tasks into menu"
 msgstr "Mozgassa a helyi feladatokat a menübe"
-
-#: admin_menu.inc:373,373,388,408,467,388,242,240,256,467
-msgid "If enabled, the tabs on the current page are moved into the administration menu. This feature is only available in themes that use the CSS classes <code>tabs primary</code> and <code>tabs secondary</code> for tabs."
-msgstr "Ha engedélyezett, akkor az aktuális oldal fülei át lesznek helyezve az adminisztrációs menübe. Ez a lehetőség csak azokban a sminkekben áll rendelkezésre, melyek használják a <code>tabs primary</code>, és a <code>tabs secondary</code> CSS osztályokat a fülekhez."
-
-#: admin_menu.inc:378,378,393,393
-msgid "If the administration menu displays duplicate menu items, you may need to rebuild your menu items using the <em>Wipe and rebuild</em> button."
-msgstr "Ha az adminisztrációs menü duplán jeleníti meg a menüpontokat, akkor újra kell építeni a menü elemeit a <em>Töröl és frissít</em> nyomógomb használatával."
-
-#: admin_menu.inc:382,362,382,397,397
-msgid "Wipe and rebuild"
-msgstr "Töröl és frissít"
-
-#: admin_menu.inc:410,410,425,439,513,425,281,279,295,535
+msgid ""
+"If enabled, the tabs on the current page are moved into the "
+"administration menu. This feature is only available in themes that use "
+"the CSS classes <code>tabs primary</code> and <code>tabs "
+"secondary</code> for tabs."
+msgstr ""
+"Ha engedélyezett, akkor az aktuális oldal fülei át lesznek "
+"helyezve az adminisztrációs menübe. Ez a lehetőség csak azokban a "
+"sminkekben áll rendelkezésre, melyek használják a <code>tabs "
+"primary</code>, és a <code>tabs secondary</code> CSS osztályokat a "
+"fülekhez."
 msgid "Administration menu settings"
 msgstr "Adminisztrációs menü beállításai"
-
-#: admin_menu.inc:415,415,430,444,518,430,286,284,300,540
 msgid "Menu link ID"
 msgstr "Menü hivatkozás azonosító"
-
-#: admin_menu.inc:415,415,430,444,518,430,286,284,300,540
 msgid "Parent link ID"
 msgstr "Szülő hivatkozás azonosító"
-
-#: admin_menu.inc:418,418,433,447,521,433,289,287,303,543
 msgid "Display additional data for each menu item"
 msgstr "Bővebb adatok megjelenítése a menü elemeihez"
-
-#: admin_menu.inc:421,421,436,450,524,436,292,290,306,546
 msgid "Display the selected items next to each menu item link."
-msgstr "A kijelelölt elemek megjelenítése egy adott menüpont hivatkozása után."
-
-#: admin_menu.inc:425,427,405,425,440,454,528,440,296,294,310,550;
-#: admin_menu.module:358,437,384,394,358,437,331,215,337,322,395,376,313
+msgstr ""
+"A kijelelölt elemek megjelenítése egy adott menüpont hivatkozása "
+"után."
 msgid "Display all menu items"
 msgstr "Az összes menüpont megjelenítése"
-
-#: admin_menu.inc:427,427,442,456,530,442,298,296,312,552
-msgid "If enabled, all menu items are displayed regardless of your site permissions. <em>Note: Do not enable on a production site.</em>"
-msgstr "Ha engedélyezett, akkor függetlenül a webhely jogosultságaitól minden menüpont megjelenik. <em>Megjegyzés: Nem célszerű hivatalos webhelyen bekapcsolni.</em>"
-
-#: admin_menu.inc:444,444,459,472,545,459,314,312,328,568
+msgid ""
+"If enabled, all menu items are displayed regardless of your site "
+"permissions. <em>Note: Do not enable on a production site.</em>"
+msgstr ""
+"Ha engedélyezett, akkor függetlenül a webhely jogosultságaitól "
+"minden menüpont megjelenik. <em>Megjegyzés: Nem célszerű hivatalos "
+"webhelyen bekapcsolni.</em>"
 msgid "Enabled these modules: !module-list."
 msgstr "A következő modulok engedélyezése: !module-list."
-
-#: admin_menu.inc:456,378,436,456,471,484,556,471,327,325,341,581;
-#: admin_menu.module:529,529,487
 msgid "Disabled these modules: !module-list."
 msgstr "A következő modulok tiltása: !module-list."
-
-#: admin_menu.inc:460,382,440,460,475,488,559,475,331,329,345,585;
-#: admin_menu.module:532,532,490
 msgid "No developer modules are enabled."
 msgstr "A fejlesztő modulok nincsenek engedélyezve."
-
-#: admin_menu.module:16,16,16,19,19,16,19,19,19,19
-msgid "The administration menu module provides a dropdown menu arranged for one- or two-click access to most administrative tasks and other common destinations (to users with the proper permissions). Use the settings below to customize the appearance of the menu."
-msgstr "Az adminisztrációs menü modul egy legördülő menüt ad, melynek segítségével egy-két kattintással elérhető minden gyakran használt adminisztrációs feladat és egyéb gyakori célok (azoknak a felhasználókak akik rendelkeznek a megfelelő jogosultsággal). Az alábbi beállításokkal a menü megjelenését lehet testreszabni."
-
-#: admin_menu.module:20,20,20,23,23,20,23,23,23,23
-msgid "The administration menu module provides a dropdown menu arranged for one- or two-click access to most administrative tasks and other common destinations (to users with the proper permissions). Administration menu also displays the number of anonymous and authenticated users, and allows modules to add their own custom menu items. Integration with the menu varies from module to module; the contributed module <a href=\"@drupal\">Devel</a>, for instance, makes strong use of the administration menu module to provide quick access to development tools."
-msgstr "Az adminisztrációs menü modul egy legördülő menüt ad, melynek segítségével egy-két kattintással elérhető minden gyakran használt adminisztrációs feladat és egyéb gyakori célok (azoknak a felhasználókak akik rendelkeznek a megfelelő jogosultsággal). Az adminisztrációs menü megjeleníti a vendég és azonosított felhasználók számát is, és lehetővé teszi a modulok számára, hogy egyedi menüpontokat adjanak a menühöz. A menüvel történő integráció modulról modulra változik; a közösség által közzétett <em><a href=\"@drupal\">Devel</a></em> modul például erősen használja az <em>adminisztrációs menü</em> modult a fejlesztési eszközök gyors elérésének érdekében."
-
-#: admin_menu.module:21,21,21,24,24,21,24,24,24,24
-msgid "The administration menu <a href=\"@settings\">settings page</a> allows you to modify some elements of the menu's behavior and appearance. Since the appearance of the menu is dependent on your site theme, substantial customizations require modifications to your site's theme and CSS files. See the advanced module README.txt file for more information on theme and CSS customizations."
-msgstr "Az adminisztrációs menü <a href=\"@settings\">beállításai oldalon</a> lehet a menü viselkedésének és megjelenésének néhány elemét testreszabni. Amióta a menü megjelenése függ a webhely sminkjétől, az alapos testreszabás módosításokat igényel a webhely sminkjében és CSS állományaiban. A smink és a CSS állományok testreszabásáról további információk a haladó modul README.txt fáljában."
-
-#: admin_menu.module:22,22,22,25,25,22,25,25,25,25
-msgid "The menu items displayed in the administration menu depend upon the actual permissions of the viewer. First, the administration menu is only displayed to users in roles with the <em>Access administration menu</em> (admin_menu module) permission. Second, a user must be a member of a role with the <em>Access administration pages</em> (system module) permission to view administrative links. And, third, only currently permitted links are displayed; for example, if a user is not a member of a role with the permissions <em>Administer permissions</em> (user module) and <em>Administer users</em> (user module), the <em>User management</em> menu item is not displayed."
-msgstr "Az adminisztrációs menüben megjelenő menüpontok függenek a látogató aktuális jogosultságaitól. Először is, az adminisztrációs menü csak azoknak jelenik meg, akik rendelkeznek az <em>adminisztrációs menü elérése</em> (<em>admin_menu</em> modul) jogosultsággal. Másodszor, a felhasználónak egy <em>adminisztrációs oldalak elérése</em> (<em>system</em> modul) jogosultsággal rendelkező csoportba kell tartoznia, hogy lássa az adminisztrációs hivatkozásokat. Harmadszor, csak az aktuálisan engedélyezett hivatkozások jelennek meg; például, ha a felhasználó nem tagja olyan csoportnak, mely rendelkezi <em>jogosultságok adminisztrációja</em> (<em>user</em> modul) és <em>felhasználók adminisztrációja</em> (<em>user</em> modul) jogosultsággal, akkor a <em>Felhasználó kezelés</em> menü nem jelenik meg."
-
-#: admin_menu.module:306,319,263,398,284,355,319,398,293,306,284,299,283,303,356,567,303,596;
-#: admin_menu.inc:343,172,170,180
+msgid ""
+"The administration menu module provides a dropdown menu arranged for "
+"one- or two-click access to most administrative tasks and other common "
+"destinations (to users with the proper permissions). Use the settings "
+"below to customize the appearance of the menu."
+msgstr ""
+"Az adminisztrációs menü modul egy legördülő menüt ad, melynek "
+"segítségével egy-két kattintással elérhető minden gyakran "
+"használt adminisztrációs feladat és egyéb gyakori célok (azoknak "
+"a felhasználókak akik rendelkeznek a megfelelő jogosultsággal). Az "
+"alábbi beállításokkal a menü megjelenését lehet testreszabni."
+msgid ""
+"The administration menu module provides a dropdown menu arranged for "
+"one- or two-click access to most administrative tasks and other common "
+"destinations (to users with the proper permissions). Administration "
+"menu also displays the number of anonymous and authenticated users, "
+"and allows modules to add their own custom menu items. Integration "
+"with the menu varies from module to module; the contributed module <a "
+"href=\"@drupal\">Devel</a>, for instance, makes strong use of the "
+"administration menu module to provide quick access to development "
+"tools."
+msgstr ""
+"Az adminisztrációs menü modul egy legördülő menüt ad, melynek "
+"segítségével egy-két kattintással elérhető minden gyakran "
+"használt adminisztrációs feladat és egyéb gyakori célok (azoknak "
+"a felhasználókak akik rendelkeznek a megfelelő jogosultsággal). Az "
+"adminisztrációs menü megjeleníti a vendég és azonosított "
+"felhasználók számát is, és lehetővé teszi a modulok számára, "
+"hogy egyedi menüpontokat adjanak a menühöz. A menüvel történő "
+"integráció modulról modulra változik; a közösség által "
+"közzétett <em><a href=\"@drupal\">Devel</a></em> modul például "
+"erősen használja az <em>adminisztrációs menü</em> modult a "
+"fejlesztési eszközök gyors elérésének érdekében."
+msgid ""
+"The administration menu <a href=\"@settings\">settings page</a> allows "
+"you to modify some elements of the menu's behavior and appearance. "
+"Since the appearance of the menu is dependent on your site theme, "
+"substantial customizations require modifications to your site's theme "
+"and CSS files. See the advanced module README.txt file for more "
+"information on theme and CSS customizations."
+msgstr ""
+"Az adminisztrációs menü <a href=\"@settings\">beállításai "
+"oldalon</a> lehet a menü viselkedésének és megjelenésének "
+"néhány elemét testreszabni. Amióta a menü megjelenése függ a "
+"webhely sminkjétől, az alapos testreszabás módosításokat "
+"igényel a webhely sminkjében és CSS állományaiban. A smink és a "
+"CSS állományok testreszabásáról további információk a haladó "
+"modul README.txt fáljában."
+msgid ""
+"The menu items displayed in the administration menu depend upon the "
+"actual permissions of the viewer. First, the administration menu is "
+"only displayed to users in roles with the <em>Access administration "
+"menu</em> (admin_menu module) permission. Second, a user must be a "
+"member of a role with the <em>Access administration pages</em> (system "
+"module) permission to view administrative links. And, third, only "
+"currently permitted links are displayed; for example, if a user is not "
+"a member of a role with the permissions <em>Administer "
+"permissions</em> (user module) and <em>Administer users</em> (user "
+"module), the <em>User management</em> menu item is not displayed."
+msgstr ""
+"Az adminisztrációs menüben megjelenő menüpontok függenek a "
+"látogató aktuális jogosultságaitól. Először is, az "
+"adminisztrációs menü csak azoknak jelenik meg, akik rendelkeznek az "
+"<em>adminisztrációs menü elérése</em> (<em>admin_menu</em> modul) "
+"jogosultsággal. Másodszor, a felhasználónak egy "
+"<em>adminisztrációs oldalak elérése</em> (<em>system</em> modul) "
+"jogosultsággal rendelkező csoportba kell tartoznia, hogy lássa az "
+"adminisztrációs hivatkozásokat. Harmadszor, csak az aktuálisan "
+"engedélyezett hivatkozások jelennek meg; például, ha a "
+"felhasználó nem tagja olyan csoportnak, mely rendelkezi "
+"<em>jogosultságok adminisztrációja</em> (<em>user</em> modul) és "
+"<em>felhasználók adminisztrációja</em> (<em>user</em> modul) "
+"jogosultsággal, akkor a <em>Felhasználó kezelés</em> menü nem "
+"jelenik meg."
 msgid "Current anonymous / authenticated users"
 msgstr "Jelenlévő vendég / azonosított felhasználó"
-
-#: admin_menu.module:308,265,286,308,286,305,305
-msgid "@count-anon / @count-auth !icon"
-msgstr "@count-anon / @count-auth !icon"
-
-#: admin_menu.module:31,47,41,49,15,42,47,47,49,28,31,43,28,28,31,47,34,34,31,34,34,15,15,34,34
 msgid "access administration menu"
 msgstr "adminisztrációs menü elérése"
-
-#: admin_menu.module:31,47,41,49,42,47,47,49,28,31,43,28,28,31,47,34,34,31,34,34,34,34
 msgid "display drupal links"
 msgstr "drupal hivatkozások megjelenítése"
-
-#: admin_menu.module:54,54,51,61,58,51,65,65,65,58;
-#: admin_menu.info:0,0,0,0,0,0,0,0,0,0;
-#: admin_menu.inc:118,116,126
 msgid "Administration menu"
 msgstr "Adminisztrációs menü"
-
-#: admin_menu.module:55,55,52,62,59,52,66,66,66,59
 msgid "Adjust administration menu settings."
 msgstr "Adminisztrációs menü beállításai."
-
-#: admin_menu.module:0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-msgid "admin_menu"
-msgstr "admin_menu"
-
-#: admin_menu.info:0,0,0,0,0,0,0,0,0,0
-msgid "Provides a dropdown menu to most administrative tasks and other common destinations (to users with the proper permissions)."
-msgstr "Egy legördülő menüt ad a gyakran használt adminisztrációs feladatokhoz és egyéb gyakori célokhoz (a megfelelő jogosultsággal rendekező felhasználókak)."
-
-#: admin_menu.inc:152,152,152,152,152,145,145,149,152,187,76,74,84,187
+msgid ""
+"Provides a dropdown menu to most administrative tasks and other common "
+"destinations (to users with the proper permissions)."
+msgstr ""
+"Egy legördülő menüt ad a gyakran használt adminisztrációs "
+"feladatokhoz és egyéb gyakori célokhoz (a megfelelő "
+"jogosultsággal rendekező felhasználókak)."
 msgid "Run updates"
 msgstr "Frissítések futtatása"
-
-#: admin_menu.inc:157,168,168,157,168,150,150,154,168,192,192
-msgid "Drupal.org"
-msgstr "Drupal.org"
-
-#: admin_menu.inc:158,169,169,158,169,151,151,155,169,193,193
-msgid "Drupal issue queue"
-msgstr "Drupal hibajegysor"
-
-#: admin_menu.inc:170,183,181,170,183,162,162,167,183,207,207
-msgid "@title issue queue"
-msgstr "@title hibajegysor"
-
-#: admin_menu.inc:178,191,189,178,191,170,170,175,191
-msgid "Logout @name"
-msgstr "Kilépés @name"
-
-#: admin_menu.inc:200,213,211,200,213,180,180,185,213,243,243;
-#: admin_menu.module:185
-msgid "Add !title"
-msgstr "!title hozzáadása"
-
-#: admin_menu.module:20,20,7,20,20,20,20,16,20,20,20,7,7;
-#: admin_menu.info:0,0,0
-msgid "Renders the administer menu tree as dropdown menu at the top of the window."
-msgstr "Az adminisztrációs menüt legördülő menüként jeleníti meg az ablak tetején."
-
-#: admin_menu.module:22,16,23,16,22,22,23,18,22
-msgid "The Administration Menu will appear at the top of the page for users who have been given the \"access administration menu\" permission.  Customize appearance of the dropdown menu here."
-msgstr "Az adminisztrációs menü megjelenik az oldal tetején minden olyan felhasználónak, aki rendelkezik az „adminisztrációs menü elérése” jogosultsággal. A legördülő menü megjelenésének testreszabása itt végezhető el."
-
-#: admin_menu.module:39,85,33,41,110,34,39,99,39,85,41,110,35,95,39,100;
-#: admin_menu.inc:333,338
-msgid "Apply margin-top to page body"
-msgstr "Felső margó biztosítása az oldal törzsében"
-
-#: admin_menu.module:63,64,65,65,63,63,65,80,63;
-#: admin_menu.info:0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-msgid "Administration Menu"
-msgstr "Adminisztrációs menü"
-
-#: admin_menu.module:64,65,66,66,64,64,66,81,64
-msgid "Adjust settings for the dropdown Administration Menu."
-msgstr "Az adminisztrációs menü beállításai."
-
-#: admin_menu.module:87,87,97
-msgid "If this setting is disabled, some absolute or fixed positioned page elements may be covered by Administration Menu."
-msgstr "Ha ez a beállítás tiltott, akkor némely abszolút, vagy fix helyre pozícionált elemet eltakarhat az adminisztrációs menü."
-
-#: admin_menu.module:343,422,372,379,343,422,316,200,322,307,380,364,301;
-#: admin_menu.inc:412,390
-msgid "Administration Menu settings"
-msgstr "Adminisztrációs menü beállításai"
-
-#: admin_menu.module:348,427,384,348,427,321,327,312,385
-msgid "Id"
-msgstr "Azonosító"
-
-#: admin_menu.module:348,427,384,348,427,321,327,312,385
-msgid "Parent id"
-msgstr "Szülő azonosító"
-
-#: admin_menu.module:351,430,387,351,430,324,208,330,315,388;
-#: admin_menu.inc:420,398
-msgid "Display extra information for menu items in Drupal Administration Menu"
-msgstr "Többlet információk megjelenítése az elemekről a Drupal adminisztációs menüjében"
-
-#: admin_menu.module:354,433,390,354,433,327,211,333,318,391;
-#: admin_menu.inc:423,401
-msgid "If enabled, the chosen information will appear next to each menu item link."
-msgstr "Ha ez engedélyezve van, a választott információ látható lesz minden menüelem hivatkozásában."
-
-#: admin_menu.module:360,439,386,396,360,439,333,217,339,324,397,378,315;
-#: admin_menu.inc:429,407
-msgid "Enable this option to disable user access checks for menu items, i.e. every menu item in the visible menu tree will be displayed to every user regardless of access permissions."
-msgstr "Ezzel a beállítással minden felhasználónak megjelenik az összes menüpont, függetlenül attól, hogy van-e jogosultsága használni azt, vagy sem."
-
-#: admin_menu.module:384,463,420,384,463,359,365,350,421,594,623;
-#: admin_menu.inc:149,147,157
 msgid "Variable editor"
 msgstr "Változó szerkesztő"
-
-#: admin_menu.module:390,469,426,390,469,365,371,356,427,600,629
-msgid "Empty cache"
-msgstr "Gyorstár ürítése"
-
-#: admin_menu.info:0,0,0,0,0,0,0,0,0,0,0,0
-msgid "Renders a menu tree for administrative purposes as dropdown menu at the top of the window."
-msgstr "Egy legördülő menüt hoz létre adminisztratív célokra az ablak tetején."
-
-#: admin_menu.inc:247,252
-msgid "Re-enable developer modules"
-msgstr "Fejlesztő modulok újra engedélyezése"
-
-#: admin_menu.inc:335,340;
-#: admin_menu.module:112,101,112,102
-msgid "If enabled, the output of this site will be shifted for approx. 20 pixels from the top of the viewport to make room for the Administration Menu. If this setting is disabled, some absolute or fixed positioned page elements at the top of the viewport may be covered by Administration Menu."
-msgstr "Ha engedélyezett, akkor a webhely kimenete kb. 20 képponttal el lesz tolva lefelé, hogy helyet biztosítson az adminisztrációs menünek. Ha ez a beállítás tiltott, akkor némely abszolút, vagy fix helyre pozícionált elemet eltakarhat az adminisztrációs menü."
-
-#: admin_menu.inc:339,344;
-#: admin_menu.module:122,105,122,106
-msgid "Drupal Administration Tweaks"
-msgstr "Drupal adminisztrációs trükkök"
-
-#: admin_menu.inc:345,350;
-#: admin_menu.module:134,117,134,118
-msgid "If enabled, fieldsets on the <a href=\"!modules-url\">Site building &raquo; Modules</a> page will be initially collapsed."
-msgstr "Ha engedélyezett, akkor kezdetben a mezőcsoportok a <a href=\"!modules-url\">Webhely építés &raquo; Modulok</a> oldalon összezárva jelennek meg."
-
-#: admin_menu.inc:348,353;
-#: admin_menu.module:137,120,137,121
-msgid "If you installed Utility module for this purpose, you can safely uninstall it now!"
-msgstr "Ha a <em>Utility</em> modul evvel a szándékkal van telepítve, most már biztonsággal eltávolítható!"
-
-#: admin_menu.inc:366,424;
-#: admin_menu.module:518,518,476
-msgid "Re-enabled these modules: !module-list."
-msgstr "A következő modulok újra engedélyezése: !module-list."
-
-#: admin_menu.inc:417,395;
-#: admin_menu.module:205
-msgid "Menu link id"
-msgstr "Menü hivatkozás azonosító"
-
-#: admin_menu.inc:417,395;
-#: admin_menu.module:205
-msgid "Parent link id"
-msgstr "Szülő hivatkozás azonosító"
-
-#: admin_menu.inc:224,240,271,222,238,270,224,240,271,224,240,272,254,270,301,254,270,301
-msgid "Edit !name"
-msgstr "!name szerkesztése"
-
-#: admin_menu.module:116,116
-msgid "Use fixed instead of absolute positioning"
-msgstr "Használjon fixet az abszolút pozicionálás helyett"
-
-#: admin_menu.module:118,118
-msgid "If enabled, the administration menu will always stay at the top of the browser viewport, even if you scroll down the page."
-msgstr "Ha engedélyezett, akkor az adminisztrációs menü mindig a böngésző ablak tetején marad (akkor is, ha lejjebb gördül az oldal)."
-
-#: admin_menu.module:118,118
-msgid "<strong>Note:</strong> In some browsers this setting might cause malformed page contents, a disappearing cursor and not editable select lists in forms. If such effects occur, this setting should be disabled."
-msgstr "<strong>Megjegyzés:</strong> Néhány böngészőben ez a beállítás rosszul megformázott oldalt, láthatatlan kurzort, nem kiválasztható űrlap elemeket okozhat. Ha ezek előfordulnak, akkor ezt a lehetőséget ki kell kapcsolni."
-
-#: admin_menu.module:126,109,126,110;
-#: admin_menu.inc:450,450
-msgid "Collapse menus in menu administration"
-msgstr "Menük összezárása a menü adminisztrációban"
-
-#: admin_menu.module:128,111,128,112;
-#: admin_menu.inc:452,452
-msgid "If enabled, menu containers on the <a href=\"!menu-url\">Site building &raquo; Menus</a> page will be collapsed like fieldsets."
-msgstr "Ha ez engedélyezett, akkor a menütárolók a <a href=\"!menu-url\">Webhelyépítés &raquo; Menük</a> oldalon össze lesznek zárva, mint a mezőcsoportok."
-
-#: admin_menu.module:141,141
-msgid "Move page tabs into administration menu"
-msgstr "Mozgassa a lapfüleket az adminisztrációs menübe"
-
-#: admin_menu.module:143,143
-msgid "If enabled, tabs of the current page (usually displayed next or below the page title) will be moved into the administration menu. This feature requires that the theme is using the CSS classes <code>tabs primary</code> and <code>tabs secondary</code> for tabs (like Garland)."
-msgstr "Ha ez engedélyezett, akkor az aktuális oldal fülei (melyek gyakran a lap címe alatt helyezkednek el) át lesznek helyezve az adminisztrációs menübe. Ez a lehetőség csak azokban a sminkekben áll rendelkezésre, melyek használják a <code>tabs primary</code>, és a <code>tabs secondary</code> CSS osztályokat a fülekhez (mint a Garland)."
-
-#: admin_menu.module:378,370,307
-msgid "Display menu item IDs in Drupal Administration Menu"
-msgstr "Mutassa a menüelem azonosítókat a Drupal adminisztrációs menüben"
-
-#: admin_menu.module:380,372,309
-msgid "If enabled, the corresponding menu item id will appear next to each menu item link."
-msgstr "Ha ez engedélyezett, akkor a megfelelő menüelem azonosítója meg fog jelenni minden menüelem hivatkozás után."
-
-#: admin_menu.inc:358
-msgid "If you are seeing a duplicated menu or other problems, you may use this button to delete everything in the menu and rebuild it."
-msgstr "Ha a menü duplán jelenik meg, vagy egyéb probléma merül fel vele, evvel a nyomógombbal lehet törölni és frissíteni mindent a menüben."
-
-#: admin_menu.install:41
-msgid "admin_menu links deleted for clean rebuild."
-msgstr "admin_menu hivatkozásai törölve lettek egy tiszta frissítéshez."
-
-#: admin_views/plugins/views_plugin_display_system.inc:183
 msgid "\"%\" may not be used for the first segment of a path."
 msgstr "„%” nem használható egy útvonal első részeként."
-
-#: admin_menu.inc:215,215
-msgid "@name"
-msgstr "@name"
-
-#: admin_menu.inc:122,120,130
 msgid "Theme registry"
 msgstr "Smink gyorstár"
-
-#: admin_menu.module:326,335,475,368,473,295
 msgid "@count-anon / @count-auth"
 msgstr "@count-anon / @count-auth"
-
-#: admin_menu.inc:222,222
-msgid "Logout"
-msgstr "Kilépés"
-
-#: admin_menu.api.php:31,31
-msgid "My item"
-msgstr "Saját elem"
-
-#: admin_menu.inc:98,96,106
 msgid "@project issue queue"
 msgstr "@project hibajegysor"
-
-#: admin_menu.inc:108,106,116
 msgid "Flush all caches"
 msgstr "Minden gyorstár ürítése"
-
-#: admin_menu.inc:119,117,127
 msgid "Cache tables"
 msgstr "Gyorsítótárak táblái"
-
-#: admin_menu.inc:121,119,129
 msgid "Page requisites"
 msgstr "Oldalkövetelmények"
-
-#: admin_menu.inc:259,257,273,484
 msgid "Developer modules to keep enabled"
 msgstr "Továbbra is engedélyezett fejlesztő modulok."
-
-#: admin_menu.inc:263,261,277,488
-msgid "Enabled developer modules in this list will not be disabled when the link <em>Disable developer modules</em> in the menu below the icon is invoked."
-msgstr "Ebben a felsorolásban szereplő engedélyezett fejlesztő modulok a <em>Fejlesztő modulok tiltása</em> hivatkozásra kattintva nem lesznek letiltva."
-
-#: admin_menu_toolbar/admin_menu_toolbar.module:49,49
+msgid ""
+"Enabled developer modules in this list will not be disabled when the "
+"link <em>Disable developer modules</em> in the menu below the icon is "
+"invoked."
+msgstr ""
+"Ebben a felsorolásban szereplő engedélyezett fejlesztő modulok a "
+"<em>Fejlesztő modulok tiltása</em> hivatkozásra kattintva nem "
+"lesznek letiltva."
 msgid "Hello <strong>@username</strong>"
 msgstr "Kedves <strong>@username</strong>"
-
-#: admin_menu_toolbar/admin_menu_toolbar.module:58,58
 msgid "Show shortcuts"
 msgstr "Gyorsbillentyűk mutatása"
-
-#: admin_menu_toolbar/admin_menu_toolbar.module:68,68
 msgid "Add content"
 msgstr "Tartalom hozzáadása"
-
-#: admin_menu_toolbar/admin_menu_toolbar.module:72,72
 msgid "Find content"
 msgstr "Tartalom keresése"
-
-#: admin_menu_toolbar/admin_menu_toolbar.info:0,0
 msgid "Administration menu Toolbar style"
 msgstr "Adminisztrációs menü eszköztárának stílusa"
-
-#: admin_menu_toolbar/admin_menu_toolbar.info:0,0
 msgid "A better Toolbar."
 msgstr "Egy jobb eszköztár."
-
-#: admin_views/admin_views.info:0,0
 msgid "Administration views"
 msgstr "Adminisztrációs nézetek"
-
-#: admin_views/admin_views.info:0,0
-msgid "Replaces all system object management pages in Drupal core with real views."
-msgstr "Lecseréli a Drupal alaprendszer rendszerobjektum-kezelő oldalait valódi nézetekre."
-
-#: admin_menu.module:25,25
-msgid "Admin Menu Block"
-msgstr "Adminisztrációs menüblokk"
-
-#: admin_menu.module:168
-msgid "Add !content-type"
-msgstr "!content-type hozzáadása"
-
-#: admin_menu.inc:248
+msgid ""
+"Replaces all system object management pages in Drupal core with real "
+"views."
+msgstr ""
+"Lecseréli a Drupal alaprendszer rendszerobjektum-kezelő oldalait "
+"valódi nézetekre."
 msgid "Collapse modules on permissions page"
 msgstr "Modulok összezárása a jogosultságok oldalon"
-
-#: admin_menu.inc:250
-msgid "Collapses permissions by module on the <a href=\"@permissions-url\">permissions</a> page."
-msgstr "Összezárja a jogosultságokat modulonként a <a href=\"@permissions-url\">jogosultságok</a> oldalon."
-
-#: admin_views/admin_views.views.inc:20
+msgid ""
+"Collapses permissions by module on the <a "
+"href=\"@permissions-url\">permissions</a> page."
+msgstr ""
+"Összezárja a jogosultságokat modulonként a <a "
+"href=\"@permissions-url\">jogosultságok</a> oldalon."
 msgid "Display the view as replacement for an existing menu path."
-msgstr "Megjeleníti a nézetet, mint egy létező menüútvonal helyettesítője."
-
-#: admin_views/plugins/views_plugin_display_system.inc:138
+msgstr ""
+"Megjeleníti a nézetet, mint egy létező menüútvonal "
+"helyettesítője."
 msgid "System path settings"
 msgstr "Rendszerútvonal beállításai"
-
-#: admin_views/plugins/views_plugin_display_system.inc:164
 msgid "An existing menu path this view replaces"
 msgstr "Egy létező menüútvonal, amit ez a nézet felvált"
-
-#: admin_views/plugins/views_plugin_display_system.inc:167
-msgid "This view replaces this path on your site. You may use \"%\" for dynamic arguments. For example: \"node/%/feed\"."
-msgstr "Ez a nézet lecseréli ezt az útvonalat a webhelyen. „%” használható dinamikus argumentumként. Például „node/%/feed”."
-
+msgid ""
+"This view replaces this path on your site. You may use \"%\" for "
+"dynamic arguments. For example: \"node/%/feed\"."
+msgstr ""
+"Ez a nézet lecseréli ezt az útvonalat a webhelyen. „%” "
+"használható dinamikus argumentumként. Például „node/%/feed”."
