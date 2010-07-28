@@ -346,7 +346,7 @@ function admin_menu_output() {
     }
 
     $content  = '<div id="admin-menu" class="' . $class_site . '">';
-    $content .= theme_admin_menu_tree();
+    $content .= theme_admin_menu_tree($_admin_menu['index']['admin']);
     $content .= '</div>';
 
     // Cache the menu for this user.
