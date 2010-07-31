@@ -261,6 +261,15 @@ function admin_menu_menu_link_alter(&$item, $menu) {
  * all pages via hook_init().
  */
 function admin_menu_init() {
+  // Re-enable breadcrumbs on administrative pages by setting 'admin_menu' as
+  // the active menu name. Also applies to users without access to the
+  // Administration menu as they should also get properly working breadcrumbs on
+  // administrative pages.
+  // @see admin_menu_menu_alter()
+  if (arg(0) == 'admin') {
+    menu_set_active_menu_name('admin_menu');
+  }
+
   if (!user_access('access administration menu') || admin_menu_suppress(FALSE)) {
     return;
   }
