@@ -1,4 +1,3 @@
-# $Id$
 #
 # Danish translation of Drupal admin_menu module
 # Copyright 2008 Mikkel Høgh <mikkel@hoegh.org>

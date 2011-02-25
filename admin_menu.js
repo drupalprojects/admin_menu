@@ -1,4 +1,3 @@
-/* $Id$ */
 
 $(document).ready(function() {
   if (!$('#admin-menu').length) {
