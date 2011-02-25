@@ -1,5 +1,4 @@
 <?php
-// $Id$
 
 /**
  * Retrieves, sclices and returns the menu tree below /admin.
