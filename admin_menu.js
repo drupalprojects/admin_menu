@@ -119,7 +119,7 @@ Drupal.admin.getCache = function (hash, onSuccess) {
       Drupal.admin.hashes.hash = status;
     }
   });
-}
+};
 
 /**
  * @defgroup admin_behaviors Administration behaviors.
@@ -165,7 +165,7 @@ Drupal.admin.behaviors.replacements = function (context, settings, $adminMenu) {
   for (var item in settings.admin_menu.replacements) {
     $(item, $adminMenu).html(settings.admin_menu.replacements[item]);
   }
-}
+};
 
 /**
  * Inject destination query strings for current page.
@@ -176,7 +176,7 @@ Drupal.admin.behaviors.destination = function (context, settings, $adminMenu) {
       this.search += (!this.search.length ? '?' : '&') + Drupal.settings.admin_menu.destination;
     });
   }
-}
+};
 
 /**
  * Apply JavaScript-based hovering behaviors.

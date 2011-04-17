@@ -1,6 +1,7 @@
 
 Admin Menu 6.x-3.x, xxxx-xx-xx
 ------------------------------
+#442560 by sun: Fixed 'defer' script attribute breaks Drupal.behaviors in FF3.6.
 by sun: Re-added Delete and rebuild button to settings page (admin_devel).
 #1146644 by sun: Fixed PHP5 E_STRICT compatibility.
 #755386 by smartinm, sun: Fixed breadcrumbs on administrative pages.
