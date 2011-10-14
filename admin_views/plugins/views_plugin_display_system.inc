@@ -55,7 +55,13 @@ class views_plugin_display_system extends views_plugin_display {
 
     $path = implode('/', $bits);
 
-    $access_plugin = $this->get_access_plugin();
+    // Views API 2 vs. 3; attempt to support both.
+    if (method_exists($this, 'get_access_plugin')) {
+      $access_plugin = $this->get_access_plugin();
+    }
+    else {
+      $access_plugin = $this->get_plugin('access');
+    }
     if (!isset($access_plugin)) {
       $access_plugin = views_get_plugin('access', 'none');
     }
