@@ -578,10 +578,12 @@ function admin_menu_output() {
  *   Current recursion level; internal use only.
  */
 function theme_admin_menu_links($elements, $depth = 0) {
-  static $destination;
+  static $destination, $destination_array;
 
   if (!isset($destination)) {
     $destination = drupal_get_destination();
+    $destination_array = explode('=', $destination);
+    $destination_array = array($destination_array[0] => urldecode($destination_array[1]));
   }
 
   $output = '';
@@ -623,7 +625,7 @@ function theme_admin_menu_links($elements, $depth = 0) {
       // for our JavaScript behavior instead.
       $class = FALSE;
       if (!empty($elements[$path]['#options']['query'])) {
-        if (is_array($elements[$path]['#options']['query']) && isset($elements[$path]['#options']['query']['destination']) && $elements[$path]['#options']['query']['destination'] == $destination) {
+        if (is_array($elements[$path]['#options']['query']) && isset($elements[$path]['#options']['query']['destination']) && $elements[$path]['#options']['query']['destination'] == $destination_array['destination']) {
           unset($elements[$path]['#options']['query']['destination']);
           $class = TRUE;
         }

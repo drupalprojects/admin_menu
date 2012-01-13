@@ -58,6 +58,8 @@ function admin_menu_links_menu($tree) {
  */
 function admin_menu_links_icon() {
   $destination = drupal_get_destination();
+  $destination = explode('=', $destination);
+  $destination = array($destination[0] => urldecode($destination[1]));
 
   $links = array(
     '#theme' => 'admin_menu_links',
@@ -341,7 +343,7 @@ function _admin_menu_form_devel_admin_settings_alter(&$form, $form_state) {
  * This can save up to 150ms on each uncached page request.
  */
 function admin_menu_toggle_modules() {
-  if (!isset($_GET['token']) || !drupal_valid_token($_GET['token'], current_path())) {
+  if (!isset($_GET['token']) || !drupal_valid_token($_GET['token'], $_GET['q'])) {
     return MENU_ACCESS_DENIED;
   }
 
@@ -424,7 +426,7 @@ function _admin_menu_developer_modules() {
  *   (optional) Name of cache to flush.
  */
 function admin_menu_flush_cache($name = NULL) {
-  if (!isset($_GET['token']) || !drupal_valid_token($_GET['token'], current_path())) {
+  if (!isset($_GET['token']) || !drupal_valid_token($_GET['token'], $_GET['q'])) {
     return MENU_ACCESS_DENIED;
   }
 
