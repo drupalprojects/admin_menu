@@ -571,17 +571,34 @@ function admin_menu_output() {
  */
 function admin_menu_admin_menu_output_build(&$content) {
   // Add "Add content" link tree on the top level.
-  $link = db_query("SELECT * FROM {menu_links} WHERE router_path = 'node/add' AND module = 'system'")->fetchAssoc();
+  $link = db_fetch_array(db_query("SELECT * FROM {menu_links} WHERE router_path = 'node/add' AND module = 'system'"));
   $conditions = array();
   for ($i = 1; $i < MENU_MAX_DEPTH; $i++) {
     if (!empty($link["p$i"])) {
       $conditions["p$i"] = $link["p$i"];
     }
   }
-  $tree = menu_build_tree($link['menu_name'], array(
-    'conditions' => $conditions,
-    'min_depth' => $link['depth'],
-  ));
+
+  // Forked from menu.inc.
+  // @see menu_tree_all_data()
+  $where = '';
+  $args = array();
+  foreach ($conditions as $column => $value) {
+    $where .= " AND $column = %d";
+    $args[] = $value;
+  }
+  $parents = $args;
+  array_unshift($args, $link['menu_name']);
+  $data['tree'] = menu_tree_data(db_query("
+    SELECT m.load_functions, m.to_arg_functions, m.access_callback, m.access_arguments, m.page_callback, m.page_arguments, m.title, m.title_callback, m.title_arguments, m.type, m.description, ml.*
+    FROM {menu_links} ml LEFT JOIN {menu_router} m ON m.path = ml.router_path
+    WHERE ml.menu_name = '%s'". $where ."
+    ORDER BY p1 ASC, p2 ASC, p3 ASC, p4 ASC, p5 ASC, p6 ASC, p7 ASC, p8 ASC, p9 ASC", $args), $parents);
+  $data['node_links'] = array();
+  menu_tree_collect_node_links($data['tree'], $data['node_links']);
+  menu_tree_check_access($data['tree'], $data['node_links']);
+  $tree = $data['tree'];
+
   $links = admin_menu_links_menu($tree);
   if (!empty($links)) {
     $key = key($links);
