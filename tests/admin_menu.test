@@ -226,19 +226,19 @@ class AdminMenuDynamicLinksTestCase extends AdminMenuWebTestCase {
     );
     $this->web_user = $this->drupalCreateUser($permissions);
     $this->drupalLogin($this->web_user);
-    $this->assertNoText(t('Add content'));
+    $this->assertNoText(t('Create content'));
 
     // Verify "Add content" appears below "Content" for administrative users.
     $permissions = $this->basePermissions + array(
-      'access content overview',
+      'administer nodes',
       'access content',
       'create article content',
     );
     $this->admin_user = $this->drupalCreateUser($permissions);
     $this->drupalLogin($this->admin_user);
     $this->assertLinkTrailByTitle(array(
-      t('Content'),
-      t('Add content'),
+      t('Content management'),
+      t('Create content'),
     ));
 
     // Verify "Add content" appears on the top-level for regular users.
@@ -249,7 +249,10 @@ class AdminMenuDynamicLinksTestCase extends AdminMenuWebTestCase {
     $this->web_user = $this->drupalCreateUser($permissions);
     $this->drupalLogin($this->web_user);
     $this->assertLinkTrailByTitle(array(
-      t('Add content'),
+      // @todo Top-level category links are based on access administration pages
+      //   permission only.
+      t('Content management'),
+      t('Create content'),
     ));
   }
 }
