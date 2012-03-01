@@ -9,8 +9,6 @@
  * Base class for all administration menu web test cases.
  */
 class AdminMenuWebTestCase extends DrupalWebTestCase {
-  protected $profile = 'testing';
-
   protected $basePermissions = array(
     'system' => 'access administration pages',
     'admin_menu' => 'access administration menu',
@@ -101,7 +99,7 @@ class AdminMenuPermissionsTestCase extends AdminMenuWebTestCase {
     // - cannot access drupal.org links
     // - cannot administer Contact module
     $permissions = $this->basePermissions + array(
-      'access content overview',
+      'administer nodes',
     );
     $admin_user = $this->drupalCreateUser($permissions);
     $this->drupalLogin($admin_user);
@@ -109,8 +107,8 @@ class AdminMenuPermissionsTestCase extends AdminMenuWebTestCase {
     // Check that the user can see the admin links, but not the drupal links.
     $this->assertElementByXPath('//div[@id="admin-menu"]', array(), 'Administration menu found.');
     $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/content'), 'Content link found.');
-    $this->assertNoElementByXPath('//div[@id="admin-menu"]//a[@href=:path]', array(':path' => 'http://drupal.org'), 'Icon » Drupal.org link not found.');
-    $this->assertNoElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/structure/contact'), 'Structure » Contact link not found.');
+    $this->assertNoElementByXPath('//div[@id="admin-menu"]//a[@href=:path]', array(':path' => 'http://drupal.org'), 'Icon Â» Drupal.org link not found.');
+    $this->assertNoElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/build/contact'), 'Structure Â» Contact link not found.');
 
     // Create a user "reversed" to the above; i.e., who
     // - cannot access content overview
@@ -118,14 +116,16 @@ class AdminMenuPermissionsTestCase extends AdminMenuWebTestCase {
     // - can administer Contact module
     $permissions = $this->basePermissions + array(
       'display drupal links',
-      'administer contact forms',
+      'administer site-wide contact form',
     );
     $admin_user2 = $this->drupalCreateUser($permissions);
     $this->drupalLogin($admin_user2);
     $this->assertElementByXPath('//div[@id="admin-menu"]', array(), 'Administration menu found.');
-    $this->assertNoElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/content'), 'Content link not found.');
-    $this->assertElementByXPath('//div[@id="admin-menu"]//a[@href=:path]', array(':path' => 'http://drupal.org'), 'Icon » Drupal.org link found.');
-    $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/structure/contact'), 'Structure » Contact link found.');
+    // @todo Top-level category links are based on access administration pages
+    //   permission only.
+    //$this->assertNoElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/content'), 'Content link not found.');
+    $this->assertElementByXPath('//div[@id="admin-menu"]//a[@href=:path]', array(':path' => 'http://drupal.org'), 'Icon Â» Drupal.org link found.');
+    $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/build/contact'), 'Structure Â» Contact link found.');
   }
 }
 
@@ -164,7 +164,7 @@ class AdminMenuDynamicLinksTestCase extends AdminMenuWebTestCase {
     // Verify that dynamic links are displayed.
     $this->drupalGet('');
     $this->assertElementByXPath('//div[@id="admin-menu"]', array(), t('Administration menu is displayed.'));
-    $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/structure/types'), "Structure » Content types link found.");
+    $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path)]', array(':path' => 'admin/content/types'), "Structure Â» Content types link found.");
 
     // Verify link title output escaping.
     $this->assertNoRaw('Cool & Special');
@@ -172,14 +172,14 @@ class AdminMenuDynamicLinksTestCase extends AdminMenuWebTestCase {
 
     // Verify Manage content type links.
     $links = array(
-      'admin/structure/types/manage/article' => 'Article',
-      'admin/structure/types/manage/special' => 'Cool & Special',
+      'admin/content/types/article' => 'Article',
+      'admin/content/types/special' => 'Cool & Special',
     );
     foreach ($links as $path => $title) {
       $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path) and text()=:title]', array(
         ':path' => $path,
         ':title' => $title,
-      ), "Structure » Content types » $title link found.");
+      ), "Structure Â» Content types Â» $title link found.");
     }
 
     // Verify Add content links.
@@ -191,9 +191,8 @@ class AdminMenuDynamicLinksTestCase extends AdminMenuWebTestCase {
       $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path) and text()=:title]', array(
         ':path' => $path,
         ':title' => $title,
-      ), "Add content » $title link found.");
+      ), "Add content Â» $title link found.");
     }
-*/
   }
 }
 
