@@ -291,8 +291,7 @@ class AdminMenuLinkTypesTestCase extends AdminMenuWebTestCase {
   function setUp() {
     parent::setUp(array('help'));
 
-    $permissions = module_invoke_all('permission');
-    $permissions = array_keys($permissions);
+    $permissions = module_invoke_all('perm');
     $this->admin_user = $this->drupalCreateUser($permissions);
     $this->drupalLogin($this->admin_user);
   }
@@ -303,37 +302,40 @@ class AdminMenuLinkTypesTestCase extends AdminMenuWebTestCase {
   function testLinkTypes() {
     // Verify that MENU_NORMAL_ITEMs appear.
     $this->assertLinkTrailByTitle(array(
-      t('Configuration'),
-      t('System'),
+      t('Site configuration'),
       t('Site information'),
     ));
 
     // Verify that MENU_LOCAL_TASKs appear.
-    $this->assertLinkTrailByTitle(array(t('People'), t('Permissions')));
-    $this->assertLinkTrailByTitle(array(t('Appearance'), t('Settings')));
-    $this->assertLinkTrailByTitle(array(t('Modules'), t('Uninstall')));
+    $this->assertLinkTrailByTitle(array(t('User management'), t('Permissions')));
+    $this->assertLinkTrailByTitle(array(t('Site building'), t('Themes'), t('Configure')));
+    $this->assertLinkTrailByTitle(array(t('Site building'), t('Modules'), t('Uninstall')));
 
     // Verify that MENU_LOCAL_ACTIONs appear.
     $this->assertLinkTrailByTitle(array(
-      t('People'),
+      t('User management'),
+      t('Users'),
       t('Add user'),
     ));
 
     // Verify that MENU_DEFAULT_LOCAL_TASKs do NOT appear.
-    $this->assertNoLinkTrailByTitle(array(t('Modules'), t('List')));
-    $this->assertNoLinkTrailByTitle(array(t('People'), t('List')));
-    $this->assertNoLinkTrailByTitle(array(t('People'), t('Permissions'), t('Permissions')));
-    $this->assertNoLinkTrailByTitle(array(t('Appearance'), t('List')));
+    $this->assertNoLinkTrailByTitle(array(t('Site building'), t('Modules'), t('List')));
+    $this->assertNoLinkTrailByTitle(array(t('User management'), t('Users'), t('List')));
+    $this->assertNoLinkTrailByTitle(array(t('User management'), t('Users'), t('Permissions'), t('Permissions')));
+    $this->assertNoLinkTrailByTitle(array(t('Site building'), t('Themes'), t('List')));
 
     // Verify that MENU_VISIBLE_IN_BREADCRUMB items (exact type) do NOT appear.
-    $this->assertNoLinkTrailByTitle(array(t('Modules'), t('Uninstall'), t('Uninstall')));
+    $this->assertNoLinkTrailByTitle(array(t('Site building'), t('Modules'), t('Uninstall'), t('Uninstall')));
     $this->assertNoLinkTrailByTitle(array(t('Help'), 'admin_menu'));
 
     // Verify that special "Index" link appears below icon.
+    // Note: admin_menu_menu_alter() hides this link entirely.
+    /*
     $this->assertElementByXPath('//div[@id="admin-menu"]//a[contains(@href, :path) and text()=:title]', array(
-      ':path' => 'admin/index',
-      ':title' => t('Index'),
+      ':path' => 'admin/by-module',
+      ':title' => t('By module'),
     ), "Icon » Index link found.");
+    */
   }
 }
 
