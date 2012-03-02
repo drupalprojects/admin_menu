@@ -238,6 +238,19 @@ function admin_menu_suppress($set = TRUE) {
 }
 
 /**
+ * Implements hook_system_info_alter().
+ *
+ * Indicate that the 'page_bottom' region (in which the administration menu
+ * is displayed) is an overlay supplemental region that should be refreshed
+ * whenever its content is updated.
+ */
+function admin_menu_system_info_alter(&$info, $file, $type) {
+  if ($type == 'theme') {
+    $info['overlay_supplemental_regions'][] = 'page_bottom';
+  }
+}
+
+/**
  * Implements hook_js().
  */
 function admin_menu_js() {
@@ -403,12 +416,13 @@ function admin_menu_output() {
   $cid = 'admin_menu:' . $user->uid . ':' . session_id() . ':' . $language->language;
 
   // Do nothing at all here if the client supports client-side caching, the user
-  // has a hash, and is NOT requesting the cache update path. Consult the hash
-  // cache last, since it requires a DB request.
+  // has a hash, and is NOT requesting either the cache update path or Overlay
+  // module's AJAX update path. Consult the hash cache last, since it requires a
+  // DB request.
   // @todo Implement a sanity-check to prevent permanent double requests; i.e.
   //   what if the client-side cache fails for any reason and performs a second
   //   request on every page?
-  if (!empty($_COOKIE['has_js']) && strpos($_GET['q'], 'js/admin_menu/cache') !== 0) {
+  if (!empty($_COOKIE['has_js']) && strpos($_GET['q'], 'js/admin_menu/cache') !== 0 && strpos($_GET['q'], 'overlay-ajax/') !== 0) {
     if (admin_menu_cache_get($cid)) {
       return;
     }
@@ -572,7 +586,7 @@ function theme_admin_menu_links($variables) {
       '#options' => array(),
     );
     // Render children to determine whether this link is expandable.
-    if (isset($elements[$path]['#type']) || isset($elements[$path]['#theme'])) {
+    if (isset($elements[$path]['#type']) || isset($elements[$path]['#theme']) || isset($elements[$path]['#pre_render'])) {
       $elements[$path]['#admin_menu_depth'] = $depth_child;
       $elements[$path]['#children'] = drupal_render($elements[$path]);
     }
