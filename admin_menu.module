@@ -453,6 +453,7 @@ function admin_menu_js_cache($hash = NULL) {
   header('Last-Modified: ' . gmdate('D, d M Y H:i:s', time()) . ' GMT');
   header('Cache-Control: max-age=' . $max_age . ', private');
   header('Content-Length: ' . strlen($content));
+  header('Content-Type: text/html; charset=utf-8');
 
   // Suppress Devel module.
   $GLOBALS['devel_shutdown'] = FALSE;
