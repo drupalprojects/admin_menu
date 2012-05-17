@@ -33,6 +33,13 @@ function admin_menu_install() {
 function admin_menu_uninstall() {
   // Remove cache table.
   drupal_uninstall_schema('admin_menu');
+
+  // Delete the custom 'admin_menu' menu.
+  db_query("DELETE FROM {menu_custom} WHERE menu_name = 'admin_menu'");
+  // Delete all altered administration links.
+  // These will be automatically rebuilt after uninstallation is complete.
+  db_query("DELETE FROM {menu_links} WHERE menu_name = 'admin_menu' OR module = 'admin_menu'");
+
   // Delete variables.
   variable_del('admin_menu_devel_modules');
   variable_del('admin_menu_devel_modules_enabled');
