@@ -143,39 +143,6 @@ function admin_menu_system_info_alter(&$info, $file, $type) {
 }
 
 /**
- * Implements hook_library_info().
- */
-function admin_menu_library_info() {
-  $path = drupal_get_path('module', 'admin_menu');
-  // Previous versions used the 'defer' attribute to increase browser rendering
-  // performance. At least starting with Firefox 3.6, deferred .js files are
-  // loaded, but Drupal.behaviors are not contained in the DOM when drupal.js
-  // executes Drupal.attachBehaviors().
-  $options = array('every_page' => TRUE);
-  // @todo D8: every_page is broken for System libraries.
-  // @see http://drupal.org/node/1805452
-  $options = array();
-
-  $libraries['drupal.admin'] = array(
-    'title' => 'Administration menu',
-    'version' => '1.0',
-    'css' => array(
-      $path . '/admin_menu.css' => $options,
-    ),
-    'js' => array(
-      $path . '/admin_menu.js' => $options,
-    ),
-    'dependencies' => array(
-      array('system', 'drupalSettings'),
-      array('system', 'jquery'),
-      array('system', 'drupal'),
-      array('system', 'jquery.once'),
-    ),
-  );
-  return $libraries;
-}
-
-/**
  * Implements hook_page_bottom().
  */
 function admin_menu_page_bottom(array &$page_bottom) {
@@ -193,7 +160,7 @@ function admin_menu_page_bottom(array &$page_bottom) {
   $page_bottom['admin_menu'] = array(
     '#attached' => array(
       'library' => array(
-        array('admin_menu', 'drupal.admin'),
+        'admin_menu/drupal.admin_menu',
       ),
     ),
   );
@@ -204,7 +171,7 @@ function admin_menu_page_bottom(array &$page_bottom) {
   $options = array();
 
   if ($user->uid == 1) {
-    $attached['css'][$path . '/admin_menu.uid1.css'] = $options;
+    $attached['library'][] = 'admin_menu/drupal.admin_menu_uid1';
   }
 
   // Destination query strings are applied via JS.
@@ -250,13 +217,16 @@ function admin_menu_page_bottom(array &$page_bottom) {
   if ($setting = variable_get('admin_menu_position_fixed', 1)) {
     $settings['position_fixed'] = $setting;
 
+    // TODO: does this still apply on D8?
     // In fixed positioning, supply a callback function for tableheader.js to
     // allow it to determine the top viewport offset.
     // @see admin_menu.js, toolbar.js
+    /*
     $attached['js'][] = array(
       'data' => array('tableHeaderOffset' => 'Drupal.admin.height'),
       'type' => 'setting',
     );
+    */
   }
   if ($setting = variable_get('admin_menu_tweak_tabs', 0)) {
     $settings['tweak_tabs'] = $setting;
@@ -268,10 +238,7 @@ function admin_menu_page_bottom(array &$page_bottom) {
     $settings['tweak_permissions'] = variable_get('admin_menu_tweak_permissions', 0);
   }
 
-  $attached['js'][] = array(
-    'data' => array('admin_menu' => $settings),
-    'type' => 'setting',
-  );
+  $attached['drupalSettings']['admin_menu']['settings'] = $settings;
 }
 
 /**
@@ -291,7 +258,12 @@ function admin_menu_suppress($set = TRUE) {
   // drupal_add_js() must only be invoked once.
   if (!empty($set) && $suppress === FALSE) {
     $suppress = TRUE;
+    // TODO: update to D8 asset system.
+    // Though surely if we suppress the admin menu, and thus don't add the JS,
+    // then there is no point in adding a JS setting?
+    /*
     drupal_add_js(array('admin_menu' => array('suppress' => 1)), 'setting');
+    */
   }
   return $suppress;
 }
