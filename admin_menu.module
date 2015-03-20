@@ -176,9 +176,9 @@ function admin_menu_library_info() {
 }
 
 /**
- * Implements hook_page_build().
+ * Implements hook_page_bottom().
  */
-function admin_menu_page_build(&$page) {
+function admin_menu_page_bottom(array &$page_bottom) {
   if (!user_access('access administration menu') || admin_menu_suppress(FALSE)) {
     return;
   }
@@ -190,14 +190,14 @@ function admin_menu_page_build(&$page) {
   global $user;
   $path = drupal_get_path('module', 'admin_menu');
 
-  $page['page_bottom']['admin_menu'] = array(
+  $page_bottom['admin_menu'] = array(
     '#attached' => array(
       'library' => array(
         array('admin_menu', 'drupal.admin'),
       ),
     ),
   );
-  $attached = &$page['page_bottom']['admin_menu']['#attached'];
+  $attached = &$page_bottom['admin_menu']['#attached'];
   $options = array('every_page' => TRUE);
   // @todo D8: every_page is broken for System libraries.
   // @see http://drupal.org/node/1805452
@@ -232,7 +232,7 @@ function admin_menu_page_build(&$page) {
   }
   // Otherwise, add the full menu to the page.
   else {
-    $page['page_bottom']['admin_menu']['#markup'] = admin_menu_output($complete);
+    $page_bottom['admin_menu']['#markup'] = admin_menu_output($complete);
   }
 
   $replacements = module_invoke_all('admin_menu_replacements', $complete);
