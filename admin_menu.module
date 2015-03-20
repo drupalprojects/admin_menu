@@ -43,26 +43,6 @@ function admin_menu_hook_info() {
 }
 
 /**
- * Implements hook_permission().
- */
-function admin_menu_permission() {
-  return array(
-    'access administration menu' => array(
-      'title' => t('Access administration menu'),
-      'description' => t('Display the administration menu at the top of each page.'),
-    ),
-    'flush caches' => array(
-      'title' => t('Flush caches'),
-      'description' => t('Access links to flush caches in the administration menu.'),
-    ),
-    'display drupal links' => array(
-      'title' => t('Display Drupal links'),
-      'description' => t('Provide Drupal.org links in the administration menu.'),
-    ),
-  );
-}
-
-/**
  * Implements hook_theme().
  */
 function admin_menu_theme() {
