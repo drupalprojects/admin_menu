@@ -83,7 +83,9 @@ function field_ui_admin_menu_map() {
       $access_arguments = $bundle_info['admin']['access arguments'];
       if (isset($bundle_info['admin']['real path'])) {
         $menu_item = menu_get_item($bundle_info['admin']['real path']);
-        $access_arguments = menu_unserialize(serialize($access_arguments), $menu_item['map']);
+        if (isset($menu_item['map'])) {
+          $access_arguments = menu_unserialize(serialize($access_arguments), $menu_item['map']);
+        }
       }
       if (!call_user_func_array($bundle_info['admin']['access callback'], $access_arguments)) {
         continue;
