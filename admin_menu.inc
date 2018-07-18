@@ -461,20 +461,22 @@ function admin_menu_links_icon() {
     '#access' => user_access('display drupal links'),
     '#href' => 'http://drupal.org',
   );
-  // Add links to project issue queues.
-  foreach (module_list(FALSE, TRUE) as $module) {
-    $info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
-    if (!isset($info['project']) || isset($links['icon']['drupal.org'][$info['project']])) {
-      continue;
+  if (variable_get('admin_menu_issue_queues', TRUE)) {
+    // Add links to project issue queues.
+    foreach (module_list(FALSE, TRUE) as $module) {
+      $info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
+      if (!isset($info['project']) || isset($links['icon']['drupal.org'][$info['project']])) {
+        continue;
+      }
+      $links['icon']['drupal.org'][$info['project']] = array(
+        '#title' => t('@project issue queue', array('@project' => $info['name'])),
+        '#weight' => ($info['project'] == 'drupal' ? -10 : 0),
+        '#href' => 'http://drupal.org/project/issues/' . $info['project'],
+        '#options' => array(
+          'query' => array('version' => (isset($info['core']) ? $info['core'] : 'All')),
+        ),
+      );
     }
-    $links['icon']['drupal.org'][$info['project']] = array(
-      '#title' => t('@project issue queue', array('@project' => $info['name'])),
-      '#weight' => ($info['project'] == 'drupal' ? -10 : 0),
-      '#href' => 'http://drupal.org/project/issues/' . $info['project'],
-      '#options' => array(
-        'query' => array('version' => (isset($info['core']) ? $info['core'] : 'All')),
-      ),
-    );
   }
   // Add items to flush caches.
   $links['icon']['flush-cache'] = array(
@@ -684,6 +686,11 @@ function admin_menu_theme_settings() {
     '#type' => 'checkbox',
     '#title' => t('Cache menu in client-side browser'),
     '#default_value' => variable_get('admin_menu_cache_client', 1),
+  );
+  $form['performance']['admin_menu_issue_queues'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Issue Queue links in icon menu'),
+    '#default_value' => variable_get('admin_menu_issue_queues', 1),
   );
 
   return system_settings_form($form);
