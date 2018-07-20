@@ -677,6 +677,13 @@ function theme_admin_menu_links($variables) {
         $elements[$path]['#options']['attributes']['class'][] = 'admin-menu-destination';
       }
 
+      // If the path has an alias replace the href with the alias.
+      if (module_exists('path')) {
+        if ($alias = drupal_get_path_alias($elements[$path]['#href'])) {
+           $elements[$path]['#href'] = $alias;
+        }
+      }
+
       $link = l($elements[$path]['#title'], $elements[$path]['#href'], $elements[$path]['#options']);
     }
     // Handle plain text items, but do not interfere with menu additions.
