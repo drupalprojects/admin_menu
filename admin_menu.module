@@ -63,7 +63,7 @@ function admin_menu_theme() {
 function admin_menu_menu() {
   // AJAX callback.
   // @see http://drupal.org/project/js
-  $items['js/admin_menu/cache'] = array(
+  $items['js/admin_menu/cache/%'] = array(
     'page callback' => 'admin_menu_js_cache',
     'delivery callback' => 'admin_menu_deliver',
     'access arguments' => array('access administration menu'),
