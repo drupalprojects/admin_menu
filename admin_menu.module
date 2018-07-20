@@ -548,7 +548,10 @@ function admin_menu_output($complete = FALSE) {
 
   // Store the new hash for this user.
   if (!empty($_COOKIE['has_js']) && !$complete) {
-    admin_menu_cache_set($cid, md5($content));
+    $cache = cache_get($cid, 'cache_admin_menu');
+    if (!$cache || !isset($cache->data)) {
+      admin_menu_cache_set($cid, md5($content));
+    }
   }
 
   return $content;
