@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\admin_menu\Tests\AdminMenuCustomizedTest.
- */
-
 namespace Drupal\admin_menu\Tests;
 
 /**

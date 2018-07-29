@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\admin_menu\Tests\AdminMenuTestBase.
- */
-
 namespace Drupal\admin_menu\Tests;
 
 use Drupal\simpletest\WebTestBase;
