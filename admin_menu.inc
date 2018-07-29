@@ -781,7 +781,7 @@ function admin_menu_flush_cache($name = NULL) {
   $function = $caches[$name]['callback'];
   $function($name);
 
-  drupal_set_message(t('!title cache cleared.', array('!title' => $caches[$name]['title'])));
+  drupal_set_message(t('@title cache cleared.', array('@title' => $caches[$name]['title'])));
 
   // The JavaScript injects a destination request parameter pointing to the
   // originating page, so the user is redirected back to that page. Without
