@@ -211,7 +211,7 @@ function admin_menu_page_build(&$page) {
     // @todo Drupal.behaviors.adminMenuMarginTop is obsolete, but
     //   hook_page_build() does not allow to set a CSS class on the body yet.
     // @see http://drupal.org/node/1473548, http://drupal.org/node/1194528
-    //$page['#attributes']['class'][] = 'admin-menu';
+    // $page['#attributes']['class'][] = 'admin-menu';
   }
   if ($setting = variable_get('admin_menu_position_fixed', 1)) {
     $settings['position_fixed'] = $setting;
@@ -502,7 +502,6 @@ function admin_menu_output($complete = FALSE) {
 
     // @todo Move the below callbacks into hook_admin_menu_build()
     //   implementations (and $module.admin_menu.inc).
-
     // Add administration menu.
     if (!empty($components['admin_menu.menu']) || $complete) {
       $content['menu'] = admin_menu_links_menu(admin_menu_tree('management'));
@@ -683,7 +682,7 @@ function theme_admin_menu_links($variables) {
       // If the path has an alias replace the href with the alias.
       if (module_exists('path')) {
         if ($alias = drupal_get_path_alias($elements[$path]['#href'])) {
-           $elements[$path]['#href'] = $alias;
+          $elements[$path]['#href'] = $alias;
         }
       }
 
@@ -761,7 +760,7 @@ function admin_menu_translated_menu_link_alter(&$item, $map) {
     }
   }
 
-  // Don't waste cycles altering items that are not visible
+  // Don't waste cycles altering items that are not visible.
   if (!$item['access']) {
     return;
   }
