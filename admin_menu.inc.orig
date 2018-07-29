@@ -97,7 +97,7 @@ function admin_menu_tree_dynamic(array $expand_map) {
   $db_or = db_or();
   foreach ($plids as $path_plids) {
     $db_and = db_and();
-    // Plids with value 0 may be ignored.
+    // plids with value 0 may be ignored.
     foreach (array_filter($path_plids) as $column => $plid) {
       $db_and->condition($column, $plid);
     }
@@ -660,7 +660,7 @@ function admin_menu_theme_settings() {
     '#default_value' => variable_get('admin_menu_tweak_modules', 0),
   );
   if (module_exists('util')) {
-    $form['tweaks']['admin_menu_tweak_modules']['#description'] = '<br /><strong>' . t('If the Utility module was installed for this purpose, it can be safely disabled and uninstalled.') . '</strong>';
+    $form['tweaks']['admin_menu_tweak_modules']['#description'] .= '<br /><strong>' . t('If the Utility module was installed for this purpose, it can be safely disabled and uninstalled.') . '</strong>';
   }
   $form['tweaks']['admin_menu_tweak_permissions'] = array(
     '#type' => 'checkbox',
@@ -914,3 +914,4 @@ function template_preprocess_admin_menu_icon(&$variables) {
 function theme_admin_menu_icon($variables) {
   return '<img class="admin-menu-icon" src="' . $variables['src'] . '" width="16" height="16" alt="' . $variables['alt'] . '" />';
 }
+
