@@ -78,7 +78,7 @@ function admin_menu_menu() {
     'file' => 'system.admin.inc',
     'file path' => drupal_get_path('module', 'system'),
   );
-  $items['admin/config/administration/admin_menu'] = array(
+  $items['admin/config/administration/admin-menu'] = array(
     'title' => 'Administration menu',
     'description' => 'Adjust administration menu settings.',
     'page callback' => 'drupal_get_form',
