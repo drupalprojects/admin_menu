@@ -1,4 +1,4 @@
-name: 'Administration Development tools'
+name: 'Administration Development Tools'
 type: module
 description: 'Administration and debugging functionality for developers and site builders.'
 package: Administration
