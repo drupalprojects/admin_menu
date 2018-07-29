@@ -30,7 +30,8 @@ function admin_devel_form_admin_menu_admin_settings_form_alter(&$form, &$form_st
  */
 function admin_devel_form_admin_menu_admin_settings_form_alter_rebuild_submit($form, &$form_state) {
   // Delete all auto-generated menu links derived from menu router items.
-  db_delete('menu_links')
+  $connection = Database::getConnection();
+  $connection->delete('menu_links')
     ->condition('module', 'system')
     ->execute();
   // Rebuild menu links from current menu router items.
